@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Classwork_3</string>
+    <string name="preference">Preference</string>
+    <string name="hint">Hint</string>
+    <string name="_0_000_000_000_000">+0 000 000 000 000</string>
+    <string name="profile">Profile</string>
+    <string name="username">Username</string>
 </resources>

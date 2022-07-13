@@ -20,13 +20,13 @@ class PreferenceAdapter : RecyclerView.Adapter<PreferenceAdapter.PreferenceViewH
     }
 
     private fun setData(holder: PreferenceViewHolder, position: Int) {
-        val preference = Preferences.values()[holder.adapterPosition]
+        val preference = PreferencesList.preferencesList[holder.adapterPosition]
         holder.binding.apply {
             prefImage.setImageResource(preference.icon)
             prefTitle.text = preference.text
             prefHint.text = preference.hint
 
-            if (holder.adapterPosition == Preferences.values().lastIndex) {
+            if (holder.adapterPosition == PreferencesList.preferencesList.lastIndex) {
                 root.removeView(prefArrow)
                 root.removeView(prefSwitch)
                 prefImage.setColorFilter(Color.RED)
@@ -42,6 +42,6 @@ class PreferenceAdapter : RecyclerView.Adapter<PreferenceAdapter.PreferenceViewH
         }
     }
 
-    override fun getItemCount() = Preferences.values().size
+    override fun getItemCount() = PreferencesList.preferencesList.size
 
 }
